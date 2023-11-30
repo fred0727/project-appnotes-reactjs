@@ -29,8 +29,8 @@ const ArchivedNotes = ({ note }) => {
   };
   return (
     <div className="p-4">
-      <div className="bg-yellow-300 rounded-b-md rounded-e-md p-4 shadow-lg flex flex-col gap-3">
-        <h2 className="font-['Pacifico']">{note.title}</h2>
+      <div className="bg-orange-400 rounded-b-md rounded-e-md p-4 shadow-lg flex flex-col gap-3 h-full">
+        <h2 className="font-['Pacifico'] md:text-2xl">{note.title}</h2>
         <p className="text-sm font-medium whitespace-break-spaces">
           {note.content}
         </p>

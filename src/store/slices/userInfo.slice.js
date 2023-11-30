@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { axiosNotes } from "../../utils/configAxios";
 import {
+  loadingCreate,
+  loadingLogin,
   messageCredentialIncorrects,
   messageErrorDuplicateEmail,
   messageSuccessSignUp,
@@ -30,6 +32,7 @@ const userInfoSlice = createSlice({
 export const { setUserInfo } = userInfoSlice.actions;
 
 export const loginUser = (dataForm) => (dispatch) => {
+  loadingLogin();
   axiosNotes
     .post("/auth/signin", dataForm)
     .then(({ data }) => {
@@ -42,6 +45,7 @@ export const loginUser = (dataForm) => (dispatch) => {
 };
 
 export const createUser = (dataForm) => (dispatch) => {
+  loadingCreate();
   axiosNotes
     .post("/auth/signup", dataForm)
     .then(() => {

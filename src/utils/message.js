@@ -78,3 +78,23 @@ export const messageCredentialIncorrects = (message) => {
     showConfirmButton: true,
   });
 };
+
+export const loadingLogin = () => {
+  Swal.fire({
+    title: "Accediendo",
+    text: "Espere un momento por favor...",
+    icon: "info",
+    timer: 2000,
+    showConfirmButton: false,
+  });
+};
+
+export const loadingCreate = () => {
+  Swal.fire({
+    title: "Registrando",
+    text: "Espere un momento por favor...",
+    icon: "info",
+    timer: 2000,
+    showConfirmButton: false,
+  });
+};

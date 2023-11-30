@@ -50,14 +50,14 @@ const FormNote = ({ showModal }) => {
   }, [note]);
 
   return (
-    <div className="p-4 py-6 pt-2 w-full">
-      <h1 className="font-['Pacifico'] text-lg">
+    <div className="p-4 py-6 pt-2 flex flex-col w-full xs:max-w-[500px]">
+      <h1 className="font-['Pacifico'] text-lg w-full">
         Hola {username},{note == "" ? " agrega " : " edita "}
         una nota.
       </h1>
       <form
         onSubmit={handleSubmit(submit)}
-        className="flex flex-col gap-3 pt-4"
+        className="flex flex-col gap-3 pt-4 w-full"
       >
         <input
           type="text"

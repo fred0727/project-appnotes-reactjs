@@ -7,18 +7,19 @@ import { getAllNotes } from "../store/slices/notesUser.slice";
 import { useDispatch, useSelector } from "react-redux";
 import { AiOutlinePlus } from "react-icons/ai";
 import { useState } from "react";
+import { ThreeDots } from "react-loader-spinner";
 
 const Home = () => {
   const { notes } = useSelector((store) => store.notesUser);
   const { token, user } = useSelector((store) => store.userInfo);
   const [isShowModal, setIsShowModal] = useState(false);
-
+  const dispatch = useDispatch();
   const username = user.name.split(" ")[0];
-  const showModal = (e) => {
+
+  const showModal = () => {
     setIsShowModal(!isShowModal);
   };
 
-  const dispatch = useDispatch();
   useEffect(() => {
     if (token) {
       dispatch(getAllNotes());
@@ -28,9 +29,22 @@ const Home = () => {
   return (
     <>
       <Header />
-      {notes.length > 0 ? (
+      {!notes ? (
+        <div className="fixed bg-white min-w-full min-h-screen flex justify-center items-center z-50 top-0">
+          <ThreeDots
+            height="120"
+            width="120"
+            radius="9"
+            color="#fde047"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClassName=""
+            visible={true}
+          />
+        </div>
+      ) : notes.length > 0 ? (
         <div className="">
-          <h3 className="font-['Pacifico'] text-lg px-6 pt-6">
+          <h3 className="font-['Pacifico'] text-lg px-6 pt-6 sm:text-xl">
             Hola {username}, mira tus notas.
           </h3>
           <div className="mt-2 px-2 grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
@@ -46,7 +60,7 @@ const Home = () => {
           </a>
         </div>
       ) : (
-        <div className="pt-6">
+        <div className="pt-6 flex justify-center min-w-screen">
           <FormNote />
         </div>
       )}

@@ -18,12 +18,12 @@ const SignUp = () => {
   };
 
   return (
-    <div className="">
-      <div className="min-h-screen flex flex-col">
-        <div className="flex h-70 relative">
-          <img src="./img/notes.jpg" alt="" className="w-full object-cover" />
+    <div className="md:p-20 md:h-screen md:bg-gray-200/50">
+      <div className="min-h-screen flex flex-col md:min-h-full md:flex-row md:shadow-xl rounded-md">
+        <div className="flex relative xs:h-96 md:h-auto">
+          <img src="./img/notes.webp" alt="" className="w-full object-cover" />
           <svg
-            className="absolute -bottom-2"
+            className="absolute -bottom-2 md:bottom-0 md:hidden"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1440 320"
           >
@@ -33,13 +33,13 @@ const SignUp = () => {
             ></path>
           </svg>
         </div>
-        <div className="min-h-full flex-1 flex flex-col items-center py-20 xs:py-16">
+        <div className="min-h-full flex-1 flex flex-col justify-center items-center xs:py-12 md:bg-white md:justify-center">
           <h1 className="text-4xl font-['Pacifico'] text-slate-700 px-8 text-center xs:text-5xl">
             Registrate
           </h1>
           <form
             onSubmit={handleSubmit(submit)}
-            className="mt-8 grid grid-cols-1 gap-4 min-w-full px-8 text-gray-700 xs:text-lg"
+            className="mt-6 grid grid-cols-1 gap-4 px-8 text-gray-700 w-full xs:w-[425px] xs:text-lg"
           >
             <input
               type="text"

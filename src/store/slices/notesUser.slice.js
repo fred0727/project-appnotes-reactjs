@@ -9,7 +9,8 @@ import {
 } from "../../utils/message";
 
 const initialState = {
-  notes: [],
+  notes: "",
+  archived: "",
   note: "",
 };
 
@@ -22,6 +23,11 @@ const notesUserSlice = createSlice({
       state.notes = newNotes;
     },
 
+    setArchivedNoteUser: (state, action) => {
+      const newNotes = action.payload;
+      state.archived = newNotes;
+    },
+
     setFindNoteUser: (state, action) => {
       const note = action.payload;
       state.note = note;
@@ -29,7 +35,11 @@ const notesUserSlice = createSlice({
   },
 });
 
-export const { setNoteUser, setFindNoteUser } = notesUserSlice.actions;
+export const {
+  setNoteUser,
+  setFindNoteUser,
+  setArchivedNoteUser,
+} = notesUserSlice.actions;
 
 export const getAllNotes = () => (dispatch) => {
   axiosNotes
@@ -41,7 +51,7 @@ export const getAllNotes = () => (dispatch) => {
 export const getArchivedNotes = () => (dispatch) => {
   axiosNotes
     .get("/notes/archived", getConfig())
-    .then(({ data }) => dispatch(setNoteUser(data.notes)))
+    .then(({ data }) => dispatch(setArchivedNoteUser(data.notes)))
     .catch((err) => console.log(err));
 };
 

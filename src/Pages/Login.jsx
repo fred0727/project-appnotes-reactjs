@@ -26,10 +26,14 @@ const Login = () => {
   }, [token]);
 
   return (
-    <div className="md:p-20 md:h-screen md:bg-gray-200/50">
-      <div className="min-h-screen flex flex-col md:min-h-full md:flex-row md:shadow-xl rounded-md">
-        <div className="flex relative xs:h-96 md:h-auto">
-          <img src="./img/notes.webp" alt="" className="w-full object-cover" />
+    <div className="md:flex md:justify-center md:items-center min-h-screen md:bg-gray-200/50 md:p-10 lg:px-32">
+      <div className="flex flex-col min-h-full md:flex-row md:shadow-xl md:w-[900px] md:h-[650px] lg:w-[100%] lg:h-[100%] rounded-md">
+        <div className="flex relative xs:h-96 md:min-h-full lg:w-[70%] lg:h-[100%]">
+          <img
+            src="./img/notes.webp"
+            alt=""
+            className="w-full h-full object-cover"
+          />
           <svg
             className="absolute -bottom-2 md:bottom-0 md:hidden"
             xmlns="http://www.w3.org/2000/svg"
@@ -41,15 +45,15 @@ const Login = () => {
             ></path>
           </svg>
         </div>
-        <div className="min-h-full flex-1 flex flex-col justify-center items-center py-20 xs:py-16 md:bg-white md:justify-center">
-          <h1 className="text-5xl font-['Pacifico'] text-slate-700 px-8 text-center xs:text-6xl">
+        <div className="flex flex-col min-h-full justify-center items-center py-20 xs:py-4 md:py-10 lg:px-4 md:bg-white md:justify-center lg:w-[30%] lg:h-auto">
+          <h1 className="text-5xl font-['Pacifico'] text-slate-700 text-center xs:text-6xl">
             Bienvenid@!
             <br />
             <span className="text-2xl xs:text-3xl">Inicia tu sesión</span>
           </h1>
           <form
             onSubmit={handleSubmit(submit)}
-            className="mt-6 grid grid-cols-1 gap-4 px-8 text-gray-700 w-full xs:w-[425px] xs:text-lg"
+            className="mt-6 grid grid-cols-1 gap-4 px-8 text-gray-700 w-full xs:w-[425px] md:w-[350px] lg:w-auto  xs:text-lg"
           >
             <input
               type="email"

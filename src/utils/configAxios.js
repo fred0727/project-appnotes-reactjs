@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosNotes = axios.create({
-  baseURL: "http://localhost:3000/api/v1",
+  baseURL: "https://apinotes-nodejs.onrender.com/api/v1/",
 });
 
 export const getConfig = () => ({
