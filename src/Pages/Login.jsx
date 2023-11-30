@@ -53,7 +53,7 @@ const Login = () => {
           </h1>
           <form
             onSubmit={handleSubmit(submit)}
-            className="mt-6 grid grid-cols-1 gap-4 px-8 text-gray-700 w-full xs:w-[425px] md:w-[350px] lg:w-full  xs:text-lg"
+            className="mt-6 grid grid-cols-1 gap-4 px-8 text-gray-700 w-full xs:w-[425px] md:w-[350px] lg:w-full xs:text-lg"
           >
             <input
               type="email"
