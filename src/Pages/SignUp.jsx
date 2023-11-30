@@ -117,6 +117,9 @@ const SignUp = () => {
               )}
             </div>
           </form>
+          <p className="text-gray-400 mt-5 text-sm md:text-base">
+            © 2023 Freddy Muñoz
+          </p>
         </div>
       </div>
     </div>
