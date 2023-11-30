@@ -76,7 +76,7 @@ const SignUp = () => {
                 },
                 pattern: {
                   value: /^(?=.*\d)(?=.*[a-záéíóúüñ])/,
-                  message: "(Password) minimo una letra",
+                  message: "(Password) minimo una letra mayuscula y un numero",
                 },
               })}
             />
