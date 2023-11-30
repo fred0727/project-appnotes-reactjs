@@ -28,7 +28,7 @@ const Login = () => {
   return (
     <div className="md:flex md:justify-center md:items-center min-h-screen md:bg-gray-200/50 md:p-10 lg:px-32">
       <div className="flex flex-col min-h-full md:flex-row md:shadow-xl md:w-[900px] md:h-[650px] lg:w-[100%] lg:h-[100%] rounded-md">
-        <div className="flex relative xs:h-96 md:min-h-full lg:w-[70%] lg:h-[100%]">
+        <div className="flex relative xs:h-96 md:min-h-full lg:w-[65%] lg:h-[100%]">
           <img
             src="./img/notes.webp"
             alt=""
@@ -45,7 +45,7 @@ const Login = () => {
             ></path>
           </svg>
         </div>
-        <div className="flex flex-col min-h-full justify-center items-center py-20 xs:py-4 md:py-10 lg:px-4 md:bg-white md:justify-center lg:w-[30%] lg:h-auto">
+        <div className="flex flex-col min-h-full justify-center items-center py-20 xs:py-4 md:py-10 lg:px-4 md:bg-white md:justify-center lg:w-[35%] lg:h-auto">
           <h1 className="text-5xl font-['Pacifico'] text-slate-700 text-center xs:text-6xl">
             Bienvenid@!
             <br />
