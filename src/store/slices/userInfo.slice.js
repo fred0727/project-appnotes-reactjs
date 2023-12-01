@@ -7,6 +7,7 @@ import {
   messageErrorDuplicateEmail,
   messageSuccessSignUp,
 } from "../../utils/message";
+import Swal from "sweetalert2";
 
 const initialState = {
   token: "",
@@ -37,9 +38,7 @@ export const loginUser = (dataForm) => (dispatch) => {
     .post("/auth/signin", dataForm)
     .then(({ data }) => {
       dispatch(setUserInfo(data));
-      setTimeout(() => {
-        window.location.href = "/";
-      }, 2000);
+      Swal.close();
     })
     .catch((err) => {
       messageCredentialIncorrects(err.response.data["message"]);
