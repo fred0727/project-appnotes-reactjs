@@ -84,7 +84,6 @@ export const loadingLogin = () => {
     title: "Accediendo",
     text: "Espere un momento por favor...",
     icon: "info",
-    timer: 2000,
     showConfirmButton: false,
   });
 };
@@ -94,7 +93,6 @@ export const loadingCreate = () => {
     title: "Registrando",
     text: "Espere un momento por favor...",
     icon: "info",
-    timer: 2000,
     showConfirmButton: false,
   });
 };
