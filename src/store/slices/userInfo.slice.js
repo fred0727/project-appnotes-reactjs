@@ -37,6 +37,9 @@ export const loginUser = (dataForm) => (dispatch) => {
     .post("/auth/signin", dataForm)
     .then(({ data }) => {
       dispatch(setUserInfo(data));
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 2000);
     })
     .catch((err) => {
       messageCredentialIncorrects(err.response.data["message"]);
